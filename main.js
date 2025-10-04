@@ -30,6 +30,51 @@ homeBtn.addEventListener('click', function () {
 
 
 
+/*
+=============================
+dark mode light mode toggle
+=============================
+*/
+
+const body = document.body;
+const sunIcon = document.querySelector(".ri-sun-line");
+const moonIcon = document.querySelector(".ri-moon-line");
+
+// initial state check (localStorage diye)
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark");
+  sunIcon.style.display = "inline-block";
+  moonIcon.style.display = "none";
+} else {
+  body.classList.add("light");
+  sunIcon.style.display = "none";
+  moonIcon.style.display = "inline-block";
+}
+
+// toggle function
+function toggleTheme() {
+  if (body.classList.contains("light")) {
+    body.classList.remove("light");
+    body.classList.add("dark");
+    sunIcon.style.display = "inline-block";
+    moonIcon.style.display = "none";
+    localStorage.setItem("theme", "dark");
+  } else {
+    body.classList.remove("dark");
+    body.classList.add("light");
+    sunIcon.style.display = "none";
+    moonIcon.style.display = "inline-block";
+    localStorage.setItem("theme", "light");
+  }
+}
+
+// event listener
+sunIcon.addEventListener("click", toggleTheme);
+moonIcon.addEventListener("click", toggleTheme);
+
+
+
+
 
 /*
 =================================================
@@ -39,9 +84,9 @@ projects
 
 const projectsJSON = [
     {
-        name: "study tymer",
-        url: "https://github.com/tahsinzidane/studyTymer",
-        about: "Clean, no-nonsense study timer with custom sessions and auto break switching. \nFocus better, hustle smarter. <a href='https://tahsinzidane.github.io/studyTymer/'>click here to visit the app</a>"
+        name: "show-file-tree",
+        url: "https://github.com/tahsinzidane/show-file-tree",
+        about: `is a simple CLI tool to display directory structures in a clean tree format. It helps developers quickly visualize nested files and folders. <a href="https://www.npmjs.com/package/@tahsinzidane/sft">Install  it </a> globally via npm for instant use`
     },
     {
         name: "emoji selector ",
