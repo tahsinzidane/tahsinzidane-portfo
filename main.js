@@ -84,6 +84,17 @@ projects
 
 const projectsJSON = [
   {
+    name: "woeFetch",
+    url: "https://github.com/tahsinzidane/weofetch",
+    about: "WeoFetch is a lightweight terminal tool that shows your system info in style, with random ASCII art messages on top. It’s like Neofetch, but with a bit of flair and randomness to make your terminal less boring. Perfect for quick system snapshots and showing off your setup."
+  },
+  {
+    name: "memory card game",
+    url: "https://github.com/tahsinzidane/MemoryCardGame",
+    about: "MemoryCardGame is a simple but fun browser game where you flip cards to find matching pairs. It’s a classic memory challenge with clean visuals and smooth interactions, perfect for short play sessions or testing your recall skills. Easy to pick up, hard to forget… unless you get too many mismatches"
+
+  },
+  {
     name: "show-file-tree",
     url: "https://github.com/tahsinzidane/show-file-tree",
     about: `is a simple CLI tool to display directory structures in a clean tree format. It helps developers quickly visualize nested files and folders. <a href="https://www.npmjs.com/package/@tahsinzidane/sft">Install  it </a> globally via npm for instant use`
@@ -93,6 +104,7 @@ const projectsJSON = [
     url: "https://github.com/tahsinzidane/emoji-verse?tab=readme-ov-file#emoji-verse",
     about: "A simple emoji selector app built for Linux distributions. \nCrafted with Electron, it offers an easy way to search and copy emojis right from your desktop."
   },
+
 ];
 
 const projectsContainer = document.getElementById("projects");
