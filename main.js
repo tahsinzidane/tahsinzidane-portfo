@@ -196,3 +196,10 @@ function toggleTheme() {
 if (localStorage.getItem("theme") === "dark") {
   startStarfall();
 }
+
+
+// ======= click to full screen the image=======
+const meIcon = document.getElementById("meIcon")
+meIcon.addEventListener("click",()=>{
+  meIcon.requestFullscreen()
+})
